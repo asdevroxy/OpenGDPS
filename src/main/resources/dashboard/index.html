@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OpenGDPS Server</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+<main class="w-screen h-screen bg-gray-950 text-white flex flex-col items-center justify-center">
+    <div class="text-4xl font-bold">OpenGDPS Account Management</div>
+
+    <div class="mt-4 bg-gray-800 rounded-lg w-72 h-96 flex flex-col p-8">
+        <div class="text-center">Select an action from below</div>
+
+        <ul class="w-full text-lg">
+            <a href="/login" class="h-12 w-full hover:bg-gray-700 flex items-center justify-center px-2 gap-1"><i class="bi-person-bounding-box"></i> Log In</a>
+            <a class="h-12 w-full hover:bg-gray-700 flex items-center justify-center px-2 gap-1"><i class="bi-person-fill-x"></i> Forgot Username</a>
+            <a class="h-12 w-full hover:bg-gray-700  flex items-center justify-center px-2 gap-1"><i class="bi-asterisk"></i> Forgot Password</a>
+        </ul>
+    </div>
+</main>
+</body>
+</html>

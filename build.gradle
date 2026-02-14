@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id("com.gradleup.shadow") version "8.3.6"
+}
+
+group = 'com.fractalmines'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+//  Annotation Processing
+    compileOnly "org.projectlombok:lombok:1.18.36"
+    annotationProcessor "org.projectlombok:lombok:1.18.36"
+
+//  Configuration
+    implementation 'de.exlll:configlib-yaml:4.8.1'
+    implementation 'com.google.code.gson:gson:2.13.2'
+
+//  Database Drivers
+    implementation 'org.mongodb:mongodb-driver-sync:5.6.3'
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.5.7'
+
+//  Web
+    implementation 'org.reflections:reflections:0.10.2'
+    implementation "org.mindrot:jbcrypt:0.4"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+jar.dependsOn(shadowJar)
